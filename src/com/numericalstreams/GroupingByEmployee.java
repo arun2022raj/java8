@@ -262,39 +262,39 @@ public class GroupingByEmployee {
 
         System.out.println("\n------Excel Questions ----------------------------");
 //
-//        Map<String, List<Employee>> groupbygender=e.stream()
-//                .collect(Collectors.groupingBy(Employee::getGender));
-//        System.out.println(groupbygender);
-//        Map<String, List<Employee>> groupbycoustcat=e.stream()
-//                .collect(Collectors.groupingBy(i->i.getSalary()>75000?"more than 75000":"Less than 75000"));
-//        System.out.println(groupbycoustcat);
-//
-//        Map<String, Map<String,List<Employee>>> twolevelgrouping=e.stream()
-//                .collect(Collectors.groupingBy(i->i.getSalary()>75000?"more than 75000":"Less than 75000",Collectors.groupingBy(Employee::getGender)));
-//        System.out.println(twolevelgrouping);
-//
-//        Map<String, Integer> twolevelgrouping1=e.stream()
-//                .collect(Collectors.groupingBy(Employee::getGender,Collectors.summingInt(Employee::getSalary)));
-//        System.out.println(twolevelgrouping1);
-//        Map<String, Set<Employee>> three_Argument_type=e.stream()
-//                .collect(Collectors.groupingBy(Employee::getGender, LinkedHashMap::new,Collectors.toSet()));
-//        System.out.println(three_Argument_type);
-//
-//        Map<String, Optional<Employee>> HighSalary=e.stream()
-//                .collect(Collectors.groupingBy(Employee::getGender,Collectors.maxBy((e1,e2)->e1.getSalary()>e2.getSalary()?1:e1.getSalary()<e2.getSalary()?-1:1)));
-//        System.out.println("HighSalary : "+HighSalary);
-//
-//        Map<String, Employee> HighSalaryemployeename=e.stream()
-//                .collect(Collectors.groupingBy(Employee::getGender,Collectors.collectingAndThen(Collectors.maxBy((e1,e2)->e1.getSalary()>e2.getSalary()?1:e1.getSalary()<e2.getSalary()?-1:1),Optional::get)));
-//        System.out.println("HighSalaryemployeename : "+HighSalaryemployeename);
-//
-//        Map<Boolean, List<Employee>> partioningby=e.stream()
-//                .collect(Collectors.partitioningBy(e1->e1.getSalary()>75000));
-//        System.out.println("partioningby : "+partioningby);
-//
-//        Map<Boolean, Optional<Employee>> partioningbytwo=e.stream()
-//                .collect(Collectors.partitioningBy(e1->e1.getSalary()>75000,Collectors.maxBy((e1,e2)->e1.getSalary()>e2.getSalary()?1:e1.getSalary()<e2.getSalary()?-1:1)));
-//        System.out.println("partioningbytwo : "+partioningbytwo);
+        Map<String, List<Employee>> groupbygender=e.stream()
+                .collect(Collectors.groupingBy(Employee::getGender));
+        System.out.println(groupbygender);
+        Map<String, List<Employee>> groupbycoustcat=e.stream()
+                .collect(Collectors.groupingBy(i->i.getSalary()>75000?"more than 75000":"Less than 75000"));
+        System.out.println(groupbycoustcat);
+
+        Map<String, Map<String,List<Employee>>> twolevelgrouping=e.stream()
+                .collect(Collectors.groupingBy(i->i.getSalary()>75000?"more than 75000":"Less than 75000",Collectors.groupingBy(Employee::getGender)));
+        System.out.println(twolevelgrouping);
+
+        Map<String, Integer> twolevelgrouping1=e.stream()
+                .collect(Collectors.groupingBy(Employee::getGender,Collectors.summingInt(Employee::getSalary)));
+        System.out.println(twolevelgrouping1);
+        Map<String, Set<Employee>> three_Argument_type=e.stream()
+                .collect(Collectors.groupingBy(Employee::getGender, LinkedHashMap::new,Collectors.toSet()));
+        System.out.println(three_Argument_type);
+
+        Map<String, Optional<Employee>> HighSalary=e.stream()
+                .collect(Collectors.groupingBy(Employee::getGender,Collectors.maxBy((e1,e2)->e1.getSalary()>e2.getSalary()?1:e1.getSalary()<e2.getSalary()?-1:1)));
+        System.out.println("HighSalary : "+HighSalary);
+
+        Map<String, Employee> HighSalaryemployeename=e.stream()
+                .collect(Collectors.groupingBy(Employee::getGender,Collectors.collectingAndThen(Collectors.maxBy((e1,e2)->e1.getSalary()>e2.getSalary()?1:e1.getSalary()<e2.getSalary()?-1:1),Optional::get)));
+        System.out.println("HighSalaryemployeename : "+HighSalaryemployeename);
+
+        Map<Boolean, List<Employee>> partioningby=e.stream()
+                .collect(Collectors.partitioningBy(e1->e1.getSalary()>75000));
+        System.out.println("partioningby : "+partioningby);
+
+        Map<Boolean, Optional<Employee>> partioningbytwo=e.stream()
+                .collect(Collectors.partitioningBy(e1->e1.getSalary()>75000,Collectors.maxBy((e1,e2)->e1.getSalary()>e2.getSalary()?1:e1.getSalary()<e2.getSalary()?-1:1)));
+        System.out.println("partioningbytwo : "+partioningbytwo);
 
 
 

@@ -1,17 +1,32 @@
 package com.numericalstreams;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Streamterminalcounting {
     public static void main(String[] args) {
+
+        List<String> l= Arrays.asList("a","b","c","e","a","b","c","e","a","b","c");
+        Map<String,Long> counters= l.stream().collect(Collectors.groupingBy((i)->i ,Collectors.counting()));
+
+
+
+
+
+
+
+
+
+
+
         List<String> stringList= Arrays.asList("Jakkam","Arun","Rajesh","Arun");
         long count=stringList.stream()
                 .filter(i->i.startsWith("A"))
                 .collect(Collectors.counting());
+
+
         System.out.println(count);
 
         List<String> upperList=stringList.stream()

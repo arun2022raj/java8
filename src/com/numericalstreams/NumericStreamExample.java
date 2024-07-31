@@ -7,8 +7,8 @@ import java.util.stream.IntStream;
 
 public class NumericStreamExample {
     public static void main(String[] args) {
-        int t=IntStream.rangeClosed(1,6)
-                .sum();
+        long t=IntStream.rangeClosed(1,6)
+                .count();
         System.out.println(t);
         long lt=IntStream.range(1,6)
                 .sum();
@@ -37,6 +37,7 @@ public class NumericStreamExample {
                 .average();
         System.out.println(optionalDouble.getAsDouble());
 
+        DoubleStream.of(2.4);
 
 
 
